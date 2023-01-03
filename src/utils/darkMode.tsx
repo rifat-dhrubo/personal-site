@@ -42,18 +42,19 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const setColorMode = (value: "dark" | "light") => {
     // Persist it on update
     localStorage.setItem("color-mode", value);
-    console.log(localStorage.getItem("color-mode"));
-
     rawSetColorMode(value);
   };
   React.useEffect(
     function addDarkModeClass() {
       if (typeof window === "undefined") return;
-      const root = document.body.classList;
-      if (colorMode !== "dark") {
-        root.remove("dark");
+      const bodyClassList = document.body.classList;
+      const root = document.documentElement;
+      if (colorMode === "dark") {
+        bodyClassList.add("dark");
+        root.style.colorScheme = "dark";
       } else {
-        root.add("dark");
+        bodyClassList.remove("dark");
+        root.style.colorScheme = "light";
       }
     },
     [colorMode]

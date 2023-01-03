@@ -24,16 +24,8 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider>
       <div
-        className={`h-full min-h-screen bg-zinc-50 dark:bg-neutral-900 ${nunito.variable} font-sans text-zinc-800 dark:text-zinc-100`}
+        className={`h-full min-h-screen bg-white dark:bg-black ${nunito.variable} font-sans text-zinc-800 dark:text-zinc-100`}
       >
-        <style jsx global>{`
-          *,
-          *::before,
-          *::after {
-            font-family: ${nunito.style.fontFamily};
-          }
-        `}</style>
-
         {getLayout(<Component {...pageProps} />)}
       </div>
     </ThemeProvider>

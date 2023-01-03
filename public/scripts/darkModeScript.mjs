@@ -22,14 +22,12 @@ function getInitialColorMode() {
 
 (function setDarkModeClass() {
   const colorMode = getInitialColorMode();
+
   if (colorMode === "dark") {
-    console.log(
-      "🚀 ~ file: darkModeScript.js:26 ~ setDarkModeClass ~ colorMode",
-      colorMode
-    );
     window.document.body.classList.add("dark");
-    return;
+    window.document.documentElement.style.colorScheme = "dark";
   } else {
     window.document.body.classList.remove("dark");
+    window.document.documentElement.style.colorScheme = "light";
   }
 })();

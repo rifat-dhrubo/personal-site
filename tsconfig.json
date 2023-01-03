@@ -30,7 +30,7 @@
     "**/*.mjs",
     "./.eslintrc.cjs",
     ".next/types/**/*.ts",
-    "public/scripts/darkModeScript.js"
+    "public/scripts/darkModeScript.mjs"
   ],
   "exclude": ["node_modules"]
 }

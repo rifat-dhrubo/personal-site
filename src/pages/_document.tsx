@@ -20,7 +20,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
           <Script
-            src="scripts/darkModeScript.js"
+            src="scripts/darkModeScript.mjs"
             strategy="beforeInteractive"
           />
         </body>
