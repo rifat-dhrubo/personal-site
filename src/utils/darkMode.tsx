@@ -47,7 +47,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   React.useEffect(
     function addDarkModeClass() {
       if (typeof window === "undefined") return;
-      const bodyClassList = document.body.classList;
+      const bodyClassList = document.documentElement.classList;
       const root = document.documentElement;
       if (colorMode === "dark") {
         bodyClassList.add("dark");

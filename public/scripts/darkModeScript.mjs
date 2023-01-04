@@ -24,10 +24,10 @@ function getInitialColorMode() {
   const colorMode = getInitialColorMode();
 
   if (colorMode === "dark") {
-    window.document.body.classList.add("dark");
-    window.document.documentElement.style.colorScheme = "dark";
+    document.documentElement.classList.add("dark");
+    document.documentElement.style.colorScheme = "dark";
   } else {
-    window.document.body.classList.remove("dark");
-    window.document.documentElement.style.colorScheme = "light";
+    document.documentElement.classList.remove("dark");
+    document.documentElement.style.colorScheme = "light";
   }
 })();
