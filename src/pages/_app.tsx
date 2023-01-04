@@ -6,6 +6,7 @@ import { type AppType } from "next/app";
 import { Router } from "next/router";
 import NProgress from "nprogress";
 
+import { Head } from "src/components/Head";
 import { ThemeProvider } from "src/utils/darkMode";
 
 const nunito = Nunito({
@@ -23,6 +24,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
 
   return (
     <ThemeProvider>
+      <Head />
       <div
         className={`h-full min-h-screen bg-white dark:bg-black ${nunito.variable} font-sans text-zinc-800 dark:text-zinc-100`}
       >

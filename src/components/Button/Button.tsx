@@ -9,7 +9,7 @@ const wrapperClass = cva("group rounded-md", {
   variants: {
     intent: {
       primary:
-        "bg-zinc-400/60 ring-zinc-400 ring-offset-[8px] focus:ring-2 dark:bg-zinc-900 dark:ring-zinc-700 dark:ring-offset-black",
+        "bg-zinc-400/60 ring-zinc-400 ring-offset-[8px] focus:ring-2 dark:bg-zinc-900 dark:ring-zinc-700 dark:ring-offset-black block cursor-pointer",
     },
   },
 });
@@ -68,3 +68,36 @@ export const Button = React.forwardRef<Ref, Props>(function Button(
     </button>
   );
 });
+
+interface LinkProps extends React.ComponentPropsWithRef<"a">, ButtonProps {
+  children: React.ReactNode;
+  wrapperClassName?: string;
+}
+type LinkRef = HTMLAnchorElement;
+
+export const LinkButton = React.forwardRef<LinkRef, LinkProps>(
+  function LinkButton(
+    {
+      intent = "primary",
+      size = "base",
+      children,
+      ref: _ref,
+      className,
+      wrapperClassName,
+      ...props
+    },
+    ref
+  ) {
+    return (
+      <a
+        ref={ref}
+        className={wrapperClass({ intent, className: wrapperClassName })}
+        {...props}
+      >
+        <span className={buttonClass({ intent, size, className })}>
+          {children}
+        </span>
+      </a>
+    );
+  }
+);
