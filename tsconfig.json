@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -33,9 +29,8 @@
     "**/*.cjs",
     "**/*.mjs",
     "./.eslintrc.cjs",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "public/scripts/darkModeScript.mjs"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
