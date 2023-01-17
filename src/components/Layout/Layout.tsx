@@ -37,7 +37,7 @@ export const Layout = ({ children }: Props) => {
         >
           <Link href="/" className="group">
             <span className="sr-only">Home</span>
-            {/* <HiHome className="h-8 w-8 transition group-hover:scale-110" /> */}
+            {/* <HiHome className="h-8 w-8 transition group-hover:scale-125" /> */}
             <Logo />
           </Link>
         </div>
@@ -45,36 +45,68 @@ export const Layout = ({ children }: Props) => {
           id="bottom-nav"
           className="flex flex-wrap items-center gap-4 text-zinc-500 dark:text-zinc-300 sm:flex-nowrap sm:gap-6 md:flex-col"
         >
-          <Link href="https://www.linkedin.com/in/rifat-hossain-dhrubo">
+          <Link
+            className="group"
+            href="https://www.linkedin.com/in/rifat-hossain-dhrubo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="sr-only">Linkedin link</span>
-            <FaLinkedinIn className="h-6 w-6" aria-hidden="true" />
+            <FaLinkedinIn
+              className="h-6 w-6 transition group-hover:scale-125"
+              aria-hidden="true"
+            />
           </Link>
-          <Link href="https://twitter.com/rifat_dhrubo">
+          <Link
+            className="group"
+            href="https://twitter.com/rifat_dhrubo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="sr-only">Twitter link</span>
-            <BsTwitter className="h-6 w-6" aria-hidden="true" />
+            <BsTwitter
+              className="h-6 w-6 transition group-hover:scale-125"
+              aria-hidden="true"
+            />
           </Link>
-          <Link href="https://www.facebook.com/rifat.dhrubo">
+          <Link
+            className="group"
+            href="https://www.facebook.com/rifat.dhrubo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="sr-only">Facebook link</span>
-            <FaFacebookF className="h-6 w-6" aria-hidden="true" />
+            <FaFacebookF
+              className="h-6 w-6 transition group-hover:scale-125"
+              aria-hidden="true"
+            />
           </Link>
-          <Link href="https://github.com/HellBlazer616">
+          <Link
+            className="group"
+            href="https://github.com/HellBlazer616"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="sr-only">Github link</span>
-            <GoMarkGithub className="h-6 w-6" aria-hidden="true" />
+            <GoMarkGithub
+              className="h-6 w-6 transition group-hover:scale-125"
+              aria-hidden="true"
+            />
           </Link>
           <ClientOnly>
             <button
               type="button"
               onClick={toggleColorMode}
-              className="group h-6 w-6 rounded-xl text-zinc-500 focus:outline-none  focus:ring-2 focus:ring-zinc-500 focus:ring-offset-4 dark:text-zinc-300 dark:hover:text-blue-500 dark:focus:ring-offset-black"
+              className="group h-6 w-6 rounded-xl text-zinc-500 focus:outline-none  focus:ring-2 focus:ring-zinc-500 focus:ring-offset-4 dark:text-zinc-300  dark:focus:ring-offset-black"
               ref={parent}
             >
               <span className="sr-only">
                 Toggle {colorMode === "dark" ? "light" : "dark"} mode
               </span>
               {colorMode === "dark" ? (
-                <HiSun className="h-6 w-6 transition group-hover:scale-110" />
+                <HiSun className="h-6 w-6 transition group-hover:scale-125" />
               ) : (
-                <HiMoon className="h-6 w-6 transition group-hover:scale-110" />
+                <HiMoon className="h-6 w-6 transition group-hover:scale-125" />
               )}
             </button>
           </ClientOnly>
