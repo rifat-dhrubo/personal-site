@@ -25,7 +25,9 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider>
       <Head />
-      <div className={`${nunito.variable} h-full min-h-screen bg-background font-sans text-foreground`}>
+      <div
+        className={`${nunito.variable} h-full min-h-screen bg-background font-sans text-foreground`}
+      >
         {getLayout(<Component {...pageProps} />)}
       </div>
     </ThemeProvider>
