@@ -1,4 +1,4 @@
-import "src/styles/global.css";
+import "src/styles/globals.css";
 import "src/styles/nProgress.css";
 
 import { Nunito } from "@next/font/google";
@@ -25,9 +25,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ThemeProvider>
       <Head />
-      <div
-        className={`h-full min-h-screen bg-white dark:bg-black ${nunito.variable} font-sans text-zinc-800 dark:text-zinc-100`}
-      >
+      <div className={`${nunito.variable} h-full min-h-screen bg-background font-sans text-foreground`}>
         {getLayout(<Component {...pageProps} />)}
       </div>
     </ThemeProvider>

@@ -1,13 +1,13 @@
 import React from "react";
 import Balancer from "react-wrap-balancer";
 
-import { Button, LinkButton } from "src/components/Button";
+import { LinkButton } from "src/components/Button";
 import { Layout } from "src/components/Layout";
 
 const index = () => {
   return (
     <Layout>
-      <div className="grid min-h-[calc(100vh-theme(height.24))] grid-rows-[1fr,auto] px-8  pt-12 sm:px-16 sm:pt-20 md:min-h-screen">
+      <div className="grid min-h-[calc(100vh-theme(height.24))] grid-rows-[1fr,auto] px-8 pt-12 sm:px-16 sm:pt-20 md:min-h-screen">
         <main className="container ml-auto sm:mt-40">
           <h1 className=" text-4xl leading-tight tracking-tight sm:text-5xl sm:leading-tight">
             <Balancer>
@@ -16,7 +16,7 @@ const index = () => {
               reality with code and popcorn.
             </Balancer>
           </h1>
-          <p className="mt-8  text-xl leading-8 dark:text-zinc-400 sm:mt-12">
+          <p className="mt-8 text-xl leading-8 text-muted-foreground sm:mt-12">
             <Balancer>
               Passionate web developer with {new Date().getFullYear() - 2021}+
               years in the industry. Striving to create user-friendly, reliable
@@ -37,7 +37,7 @@ const index = () => {
             Resume.pdf
           </LinkButton>
         </main>
-        <footer className="mt-auto py-2 text-center text-xs dark:text-zinc-400">
+        <footer className="mt-auto py-2 text-center text-xs text-muted-foreground">
           &copy; 2023-present Rifat Hossain. All rights reserved.
         </footer>
       </div>

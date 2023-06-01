@@ -30,10 +30,10 @@ export const Layout = ({ children }: Props) => {
   };
   return (
     <div className="min-h-screen">
-      <aside className="min-h-nav fixed top-0 left-1/2 z-20 mt-8 flex w-11/12 max-w-xl -translate-x-1/2 flex-wrap  items-center justify-between gap-4 rounded-xl border border-zinc-400/30 bg-zinc-50 p-4 backdrop-blur-sm  dark:bg-zinc-800/60 sm:flex-nowrap md:left-0 md:mx-0  md:mt-0 md:h-full md:w-nav md:max-w-none md:translate-x-0 md:flex-col md:rounded-none md:border-0 md:border-r md:py-8">
+      <aside className="min-h-nav fixed left-1/2 top-0 z-20 mt-8 flex w-11/12 max-w-xl -translate-x-1/2 flex-wrap items-center  justify-between gap-4 rounded-xl border border-border p-4  backdrop-blur-sm sm:flex-nowrap md:left-0  md:mx-0 md:mt-0 md:h-full md:w-nav md:max-w-none md:translate-x-0 md:flex-col md:rounded-none md:border-0 md:border-r md:py-8">
         <div
           id="top-nav"
-          className="flex items-center gap-4 font-bold text-zinc-500 dark:text-zinc-300 md:flex-col"
+          className="flex items-center gap-4 font-bold md:flex-col"
         >
           <Link href="/" className="group">
             <span className="sr-only">Home</span>
@@ -43,7 +43,7 @@ export const Layout = ({ children }: Props) => {
         </div>
         <div
           id="bottom-nav"
-          className="flex flex-wrap items-center gap-4 text-zinc-500 dark:text-zinc-300 sm:flex-nowrap sm:gap-6 md:flex-col"
+          className="flex flex-wrap items-center gap-4 sm:flex-nowrap sm:gap-6 md:flex-col"
         >
           <Link
             className="group"

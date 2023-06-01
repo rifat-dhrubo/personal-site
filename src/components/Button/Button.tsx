@@ -3,13 +3,13 @@ import { cva } from "class-variance-authority";
 import React from "react";
 
 export const ButtonTypesArray = ["primary", "secondary"] as const;
-export type ButtonType = typeof ButtonTypesArray[number];
+export type ButtonType = (typeof ButtonTypesArray)[number];
 
 const wrapperClass = cva("group rounded-md", {
   variants: {
     intent: {
       primary:
-        "bg-zinc-400/60 ring-zinc-400 ring-offset-[8px] focus:ring-2 dark:bg-zinc-900 dark:ring-zinc-700 dark:ring-offset-black block cursor-pointer",
+        "dark:bg-accent bg-border text-foreground ring-ring ring-offset-[8px] focus:ring-2 dark:ring-offset-background block cursor-pointer",
     },
   },
 });
@@ -19,7 +19,7 @@ const buttonClass = cva(
   {
     variants: {
       intent: {
-        primary: "bg-white/80 dark:bg-black/60",
+        primary: "bg-secondary text-secondary-foreground",
       },
       size: {
         sm: "px-4 pt-3 pb-2 text-lg",
