@@ -1,3 +1,4 @@
+import { formatDistanceToNow } from "date-fns";
 import React from "react";
 import Balancer from "react-wrap-balancer";
 
@@ -5,6 +6,8 @@ import { LinkButton } from "src/components/Button";
 import { Layout } from "src/components/Layout";
 
 const index = () => {
+  const duration = formatDistanceToNow(new Date(2020, 6, 1));
+
   return (
     <Layout>
       <div className="grid min-h-[calc(100vh-theme(height.24))] grid-rows-[1fr,auto] px-8 pt-12 sm:px-16 sm:pt-20 md:min-h-screen">
@@ -18,13 +21,12 @@ const index = () => {
           </h1>
           <p className="mt-8 text-xl leading-8 text-muted-foreground sm:mt-12">
             <Balancer>
-              Passionate web developer with {new Date().getFullYear() - 2021}+
-              years in the industry. Striving to create user-friendly, reliable
-              software solutions. I&apos;m always looking for ways to stay
-              updated on the latest technologies and trends in software
-              engineering and enjoy collaborating with others. My mission is to
-              build user-friendly software solutions with a sprinkle of
-              awesomeness.
+              Passionate web developer with {duration} in the industry. Striving
+              to create user-friendly, reliable software solutions. I&apos;m
+              always looking for ways to stay updated on the latest technologies
+              and trends in software engineering and enjoy collaborating with
+              others. My mission is to build user-friendly software solutions
+              with a sprinkle of awesomeness.
             </Balancer>
           </p>
 
