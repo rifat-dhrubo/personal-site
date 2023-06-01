@@ -76,7 +76,7 @@ export default {
         nav: "4rem",
       },
       fontFamily: {
-        sans: ["var(--font-nunito)", ...fontFamily.sans],
+        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
     },
   },

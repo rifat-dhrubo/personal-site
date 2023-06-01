@@ -11,7 +11,7 @@ import { ThemeProvider } from "src/utils/darkMode";
 
 const nunito = Nunito({
   subsets: ["latin"],
-  variable: "--font-nunito",
+  variable: "--font-sans",
 });
 
 const MyApp: AppType = ({ Component, pageProps }) => {
