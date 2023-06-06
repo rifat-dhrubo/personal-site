@@ -1,8 +1,8 @@
 import "src/styles/globals.css";
 import "src/styles/nProgress.css";
 
-import { Nunito } from "@next/font/google";
 import { type AppType } from "next/app";
+import { Nunito } from "next/font/google";
 import { Router } from "next/router";
 import NProgress from "nprogress";
 

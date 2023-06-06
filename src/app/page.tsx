@@ -9,8 +9,8 @@ const IndexPage = () => {
   const duration = formatDistanceToNow(new Date(2020, 6, 1));
   return (
     <Layout>
-      <div className="grid min-h-[calc(100vh-theme(height.24))] grid-rows-[1fr,auto] px-8 pt-12 sm:px-16 sm:pt-20 md:min-h-screen">
-        <main className="container ml-auto sm:mt-40">
+      <div className="grid min-h-[calc(100vh-theme(height.24))] grid-rows-[1fr,auto] px-4 pt-12 sm:pt-20 md:min-h-screen md:px-16">
+        <main className="container ml-auto md:mt-24 lg:mt-40">
           <h1 className=" text-4xl leading-tight tracking-tight sm:text-5xl sm:leading-tight">
             <Balancer>
               Hi, <span className="wave">👋</span> I&apos;m Rifat Hossain. Web
@@ -38,7 +38,7 @@ const IndexPage = () => {
             Resume.pdf
           </LinkButton>
         </main>
-        <footer className="mt-auto py-2 text-center text-xs text-muted-foreground">
+        <footer className="mt-4 py-2 text-center text-xs text-muted-foreground">
           &copy; 2023-present Rifat Hossain. All rights reserved.
         </footer>
       </div>

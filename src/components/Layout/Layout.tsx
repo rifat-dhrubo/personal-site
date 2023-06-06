@@ -4,11 +4,36 @@ import { BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
 
+import { ModeToggle } from "@/components/mode-toggle";
+
 import { Logo } from "../Logo";
 
 type Props = {
   children: React.ReactNode;
 };
+
+const linkArray = [
+  {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/rifat-hossain-dhrubo",
+    Icon: FaLinkedinIn,
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com/rifat_dhrubo",
+    Icon: BsTwitter,
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/rifat.dhrubo",
+    Icon: FaFacebookF,
+  },
+  {
+    name: "Github",
+    href: "https://github.com/rifat-dhrubo",
+    Icon: GoMarkGithub,
+  },
+];
 
 export const Layout = ({ children }: Props) => {
   return (
@@ -28,54 +53,23 @@ export const Layout = ({ children }: Props) => {
           id="bottom-nav"
           className="flex flex-wrap items-center gap-4 sm:flex-nowrap sm:gap-6 md:flex-col"
         >
-          <Link
-            className="group"
-            href="https://www.linkedin.com/in/rifat-hossain-dhrubo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="sr-only">Linkedin link</span>
-            <FaLinkedinIn
-              className="h-6 w-6 transition group-hover:scale-125"
-              aria-hidden="true"
-            />
-          </Link>
-          <Link
-            className="group"
-            href="https://twitter.com/rifat_dhrubo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="sr-only">Twitter link</span>
-            <BsTwitter
-              className="h-6 w-6 transition group-hover:scale-125"
-              aria-hidden="true"
-            />
-          </Link>
-          <Link
-            className="group"
-            href="https://www.facebook.com/rifat.dhrubo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="sr-only">Facebook link</span>
-            <FaFacebookF
-              className="h-6 w-6 transition group-hover:scale-125"
-              aria-hidden="true"
-            />
-          </Link>
-          <Link
-            className="group"
-            href="https://github.com/HellBlazer616"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="sr-only">Github link</span>
-            <GoMarkGithub
-              className="h-6 w-6 transition group-hover:scale-125"
-              aria-hidden="true"
-            />
-          </Link>
+          {linkArray.map(({ name, href, Icon }) => (
+            <Link
+              key={href}
+              className="group"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="sr-only">{name}</span>
+              <Icon
+                className="h-6 w-6 transition group-hover:scale-125"
+                aria-hidden="true"
+              />
+            </Link>
+          ))}
+
+          <ModeToggle />
         </div>
       </aside>
 
