@@ -8,6 +8,7 @@ export const siteConfig = {
     twitter: "https://github.com/rifat-dhrubo",
     github: "https://twitter.com/rifat_dhrubo",
   },
+  image: "https://rifathossain.dev/og",
 };
 
 export type SiteConfig = typeof siteConfig;
