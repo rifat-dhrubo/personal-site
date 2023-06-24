@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 
 import type { Metadata } from "next";
+import { Provider } from "react-wrap-balancer";
 
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -52,7 +53,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <Provider>{children}</Provider>
           <TailwindIndicator />
         </ThemeProvider>
       </body>

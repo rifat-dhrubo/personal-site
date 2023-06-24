@@ -57,7 +57,7 @@ specifiers:
   react-day-picker: ^8.7.1
   react-dom: 18.2.0
   react-icons: ^4.9.0
-  react-wrap-balancer: ^0.5.0
+  react-wrap-balancer: ^1.0.0
   tailwind-merge: ^1.12.0
   tailwindcss: ^3.3.2
   tailwindcss-animate: ^1.0.5
@@ -108,7 +108,7 @@ dependencies:
   react-day-picker: 8.7.1_kzhlcyde2l6xjiirkbg7jzhosa
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.9.0_react@18.2.0
-  react-wrap-balancer: 0.5.0_react@18.2.0
+  react-wrap-balancer: 1.0.0_react@18.2.0
   tailwind-merge: 1.12.0
   typescript: 5.0.4
 
@@ -3730,8 +3730,8 @@ packages:
       tslib: 2.5.2
     dev: false
 
-  /react-wrap-balancer/0.5.0_react@18.2.0:
-    resolution: {integrity: sha512-5vwe5QDczQ9zwAtv3iEVj8hdMbNwQtM/QlSNLJfDUzRE9noPtxevb+Kon916Mu2RUorCrAtashQ1F9BVBjdeZg==}
+  /react-wrap-balancer/1.0.0_react@18.2.0:
+    resolution: {integrity: sha512-yjDH+I8WGyDfh95gKhX/6ckfSBAltwQkxiYxtLPlyIRQNUVSjvz1uHR6Hpy+zHyOkJQw6GEC5RPglA41QXvzyw==}
     peerDependencies:
       react: '>=16.8.0 || ^17.0.0 || ^18'
     dependencies:
