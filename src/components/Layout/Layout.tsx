@@ -51,21 +51,18 @@ export const Layout = ({ children }: Props) => {
         </div>
         <div
           id="bottom-nav"
-          className="flex flex-wrap items-center gap-4 sm:flex-nowrap sm:gap-6 md:flex-col"
+          className="flex flex-wrap items-center gap-4 text-primary sm:flex-nowrap sm:gap-6 md:flex-col"
         >
           {linkArray.map(({ name, href, Icon }) => (
             <Link
               key={href}
-              className="group"
+              className="group inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-accent"
               href={href}
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className="sr-only">{name}</span>
-              <Icon
-                className="h-6 w-6 transition group-hover:scale-125"
-                aria-hidden="true"
-              />
+              <Icon className="h-6 w-6 transition" aria-hidden="true" />
             </Link>
           ))}
 
