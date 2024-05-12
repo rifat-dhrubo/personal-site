@@ -1,12 +1,13 @@
 import React from "react";
 
-export const Logo = () => {
+export const Logo = ({className}: {className?: string}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="45"
       height="27.5"
       fill="none"
+      className={className}
     >
       <path
         className="fill-zinc-800 dark:fill-zinc-100"
