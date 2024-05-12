@@ -1,10 +1,13 @@
-import { Logo } from '@/components/Logo'
-import React from 'react'
+import React from "react";
+
+import { Logo } from "@/components/Logo";
 
 const LogoPage = () => {
   return (
-    <div className='min-h-screen'><Logo className='w-full'></Logo></div>
-  )
-}
+    <div className="min-h-screen">
+      <Logo className="w-full" />
+    </div>
+  );
+};
 
-export default LogoPage
+export default LogoPage;
