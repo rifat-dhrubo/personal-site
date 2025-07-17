@@ -10,7 +10,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className="grid min-h-[calc(100vh-theme(height.24))] grid-rows-[1fr,auto] px-4 pt-12 sm:pt-20 md:min-h-screen md:px-16">
-        <main className="container ml-auto md:mt-24 lg:mt-40">
+        <main className="container ml-auto md:mt-24 lg:mt-40 px-8">
           <h1 className=" text-4xl leading-tight tracking-tight sm:text-5xl sm:leading-tight">
             <Balancer>
               Hi, <span className="wave">👋</span> I&apos;m Rifat Hossain. Web

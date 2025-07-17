@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { BsTwitter } from "react-icons/bs";
-import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
-import { GoMarkGithub } from "react-icons/go";
+import { FaLinkedinIn, FaFacebookF ,FaGithub} from "react-icons/fa";
+
 
 import { ModeToggle } from "@/components/mode-toggle";
 
@@ -31,14 +31,14 @@ const linkArray = [
   {
     name: "Github",
     href: "https://github.com/rifat-dhrubo",
-    Icon: GoMarkGithub,
+    Icon: FaGithub,
   },
 ];
 
 export const Layout = ({ children }: Props) => {
   return (
     <div className="min-h-screen">
-      <aside className="min-h-nav fixed left-1/2 top-0 z-20 mt-8 flex w-11/12 max-w-xl -translate-x-1/2 flex-wrap items-center  justify-between gap-4 rounded-xl border border-border p-4  backdrop-blur-sm sm:flex-nowrap md:left-0  md:mx-0 md:mt-0 md:h-full md:w-nav md:max-w-none md:translate-x-0 md:flex-col md:rounded-none md:border-0 md:border-r md:py-8">
+      <aside className="min-h-nav fixed left-1/2 top-0 z-20 mt-8 flex w-11/12 max-w-xl -translate-x-1/2 flex-wrap items-center justify-between gap-4 rounded-xl border border-border p-4 backdrop-blur-sm sm:flex-nowrap md:left-0  md:mx-0 md:mt-0 md:h-full md:w-[74px] md:max-w-[72px] md:translate-x-0 md:flex-col md:rounded-none md:border-0 md:border-r md:py-8">
         <div
           id="top-nav"
           className="flex items-center gap-4 font-bold md:flex-col"
@@ -70,7 +70,7 @@ export const Layout = ({ children }: Props) => {
         </div>
       </aside>
 
-      <div className="min-h-screen pt-[calc(theme(width.nav)+2rem)] md:pl-nav md:pt-0">
+      <div className="min-h-screen pt-[calc(74px+2rem)] md:pl-[74px] md:pt-0">
         {children}
       </div>
     </div>

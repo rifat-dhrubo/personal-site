@@ -15,24 +15,42 @@ export const metadata: Metadata = {
     template: "%s | Rifat Hossain",
   },
   description: siteConfig.description,
-  keywords: [
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Personal Site",
-    "Front end development",
-  ],
-  creator: siteConfig.name,
+  keywords: siteConfig.keywords,
+  creator: siteConfig.author,
+  authors: [{ name: siteConfig.author, url: siteConfig.url }],
+  publisher: siteConfig.author,
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.image,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+    locale: siteConfig.locale,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: siteConfig.social.twitter,
+    creator: siteConfig.social.twitter,
+    title: siteConfig.name,
+    description: siteConfig.description,
     images: [siteConfig.image],
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
+  },
+  alternates: {
+    canonical: siteConfig.url,
   },
 };
 

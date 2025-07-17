@@ -22,9 +22,9 @@ type Props = {
 
 export const CustomHead = ({
   title = "Rifat Hossain",
-  description = "An avid reader and a film buff. Also, I build things for the web",
+  description = "Rifat Hossain – Web developer, reader, and film fanatic. I make dreams reality with code and coffee. Passionate about building user-friendly, reliable software solutions.",
   ogTitle = "Rifat Hossain",
-  ogDescription = "An avid reader and a film buff. Also, I build things for the web",
+  ogDescription = "Rifat Hossain – Web developer, reader, and film fanatic. I make dreams reality with code and coffee. Passionate about building user-friendly, reliable software solutions.",
   ogType = "website",
   // ogImage = '',
   // ogImageType = 'image/png',
@@ -88,18 +88,17 @@ export const CustomHead = ({
         <link rel="canonical" href={ogUrl} key="og-url" />
       ) : null}
 
-      {/* <meta property="og:image" content={`${ogImage}`} itemProp="image" key="og-image"  />
-      <meta property="og:image:type" content={ogImageType}  key="og-image-type" />
-      <meta property="og:image:height" content={ogImageHeight} key="og-image-height"  />
-      <meta property="og:image:width" content={ogImageWidth} /> key="og-image-width"  */}
+      <meta property="og:image" content="https://rifathossain.dev/og" itemProp="image" key="og-image" />
+      <meta property="og:image:type" content="image/png" key="og-image-type" />
+      <meta property="og:image:width" content="1200" key="og-image-width" />
+      <meta property="og:image:height" content="630" key="og-image-height" />
 
-      {/* <meta property="fb:app_id" content="1733127810177735" />
-      <meta name="twitter:card" content={twitterCard}  key="twitter-card" />
-      <meta name="twitter:site" content={twitterSite}  key="twitter-site" />
-      <meta name="twitter:creator" content={twitterCreator} / key="twitter-creator" >
-      <meta name="twitter:title" content={twitterTitle} key="twitter-title" />
-      <meta name="twitter:description" content={twitterDescription}  key="twitter-description" />
-      <meta name="twitter:image" content={`https://${twitterImage}`}  key="twitter-image" /> */}
+      <meta name="twitter:card" content="summary_large_image" key="twitter-card" />
+      <meta name="twitter:site" content="@rifat_dhrubo" key="twitter-site" />
+      <meta name="twitter:creator" content="@rifat_dhrubo" key="twitter-creator" />
+      <meta name="twitter:title" content="Rifat Hossain" key="twitter-title" />
+      <meta name="twitter:description" content="Rifat Hossain – Web developer, reader, and film fanatic. I make dreams reality with code and coffee. Passionate about building user-friendly, reliable software solutions." key="twitter-description" />
+      <meta name="twitter:image" content="https://rifathossain.dev/og" key="twitter-image" />
     </Head>
   );
 };
