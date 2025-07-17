@@ -54,7 +54,7 @@
     "nprogress": "0.2.0",
     "react": "19.1.0",
     "react-day-picker": "^8.7.1",
-    "react-dom": "18.3.1",
+    "react-dom": "19.1.0",
     "react-icons": "^4.9.0",
     "react-wrap-balancer": "^1.0.0",
     "tailwind-merge": "^1.12.0"
