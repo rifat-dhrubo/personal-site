@@ -66,8 +66,8 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans text-foreground",
-          fontSans.variable
+          "bg-background text-foreground min-h-screen font-sans",
+          fontSans.variable,
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

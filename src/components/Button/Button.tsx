@@ -32,7 +32,7 @@ const buttonClass = cva(
       intent: "primary",
       size: "base",
     },
-  }
+  },
 );
 
 type Ref = HTMLButtonElement;
@@ -49,12 +49,11 @@ export const Button = React.forwardRef<Ref, Props>(function Button(
     intent = "primary",
     size = "base",
     children,
-    ref: _ref,
     className,
     wrapperClassName,
     ...props
   },
-  ref
+  ref,
 ) {
   return (
     <button
@@ -81,12 +80,11 @@ export const LinkButton = React.forwardRef<LinkRef, LinkProps>(
       intent = "primary",
       size = "base",
       children,
-      ref: _ref,
       className,
       wrapperClassName,
       ...props
     },
-    ref
+    ref,
   ) {
     return (
       <a
@@ -99,5 +97,5 @@ export const LinkButton = React.forwardRef<LinkRef, LinkProps>(
         </span>
       </a>
     );
-  }
+  },
 );

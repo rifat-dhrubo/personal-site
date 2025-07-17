@@ -10,15 +10,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className="grid min-h-[calc(100vh-theme(height.24))] grid-rows-[1fr,auto] px-4 pt-12 sm:pt-20 md:min-h-screen md:px-16">
-        <main className="container ml-auto md:mt-24 lg:mt-40 px-8">
-          <h1 className=" text-4xl leading-tight tracking-tight sm:text-5xl sm:leading-tight">
+        <main className="container ml-auto px-8 md:mt-24 lg:mt-40">
+          <h1 className="text-4xl leading-tight tracking-tight sm:text-5xl sm:leading-tight">
             <Balancer>
               Hi, <span className="wave">👋</span> I&apos;m Rifat Hossain. Web
               developer by day, reader and film fanatic by night. I make dreams
               reality with code and popcorn.
             </Balancer>
           </h1>
-          <p className="mt-8 text-xl leading-8 text-muted-foreground sm:mt-12">
+          <p className="text-muted-foreground mt-8 text-xl leading-8 sm:mt-12">
             <Balancer>
               Passionate web developer with {duration} in the industry. Striving
               to create user-friendly, reliable software solutions. I&apos;m
@@ -38,7 +38,7 @@ const IndexPage = () => {
             Resume.pdf
           </LinkButton>
         </main>
-        <footer className="mt-4 py-2 text-center text-xs text-muted-foreground">
+        <footer className="text-muted-foreground mt-4 py-2 text-center text-xs">
           &copy; 2023-present Rifat Hossain. All rights reserved.
         </footer>
       </div>

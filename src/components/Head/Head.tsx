@@ -88,17 +88,38 @@ export const CustomHead = ({
         <link rel="canonical" href={ogUrl} key="og-url" />
       ) : null}
 
-      <meta property="og:image" content="https://rifathossain.dev/og" itemProp="image" key="og-image" />
+      <meta
+        property="og:image"
+        content="https://rifathossain.dev/og"
+        itemProp="image"
+        key="og-image"
+      />
       <meta property="og:image:type" content="image/png" key="og-image-type" />
       <meta property="og:image:width" content="1200" key="og-image-width" />
       <meta property="og:image:height" content="630" key="og-image-height" />
 
-      <meta name="twitter:card" content="summary_large_image" key="twitter-card" />
+      <meta
+        name="twitter:card"
+        content="summary_large_image"
+        key="twitter-card"
+      />
       <meta name="twitter:site" content="@rifat_dhrubo" key="twitter-site" />
-      <meta name="twitter:creator" content="@rifat_dhrubo" key="twitter-creator" />
+      <meta
+        name="twitter:creator"
+        content="@rifat_dhrubo"
+        key="twitter-creator"
+      />
       <meta name="twitter:title" content="Rifat Hossain" key="twitter-title" />
-      <meta name="twitter:description" content="Rifat Hossain – Web developer, reader, and film fanatic. I make dreams reality with code and coffee. Passionate about building user-friendly, reliable software solutions." key="twitter-description" />
-      <meta name="twitter:image" content="https://rifathossain.dev/og" key="twitter-image" />
+      <meta
+        name="twitter:description"
+        content="Rifat Hossain – Web developer, reader, and film fanatic. I make dreams reality with code and coffee. Passionate about building user-friendly, reliable software solutions."
+        key="twitter-description"
+      />
+      <meta
+        name="twitter:image"
+        content="https://rifathossain.dev/og"
+        key="twitter-image"
+      />
     </Head>
   );
 };

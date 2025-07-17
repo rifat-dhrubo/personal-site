@@ -57,7 +57,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
         root.style.colorScheme = "light";
       }
     },
-    [colorMode]
+    [colorMode],
   );
   return (
     <ThemeContext.Provider value={{ colorMode, setColorMode }}>
