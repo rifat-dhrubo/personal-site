@@ -36,11 +36,62 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 				content:
 					'Full-stack software engineer specializing in accessible web experiences, scaling systems, and shipping reliable applications with React, Next.js, and Node.js.',
 			},
+			{
+				property: 'og:type',
+				content: 'website',
+			},
+			{
+				property: 'og:title',
+				content: 'Rifat Hossain | Full-stack Software Engineer',
+			},
+			{
+				property: 'og:description',
+				content:
+					'Full-stack software engineer specializing in accessible web experiences, scaling systems, and shipping reliable applications.',
+			},
+			{
+				property: 'og:image',
+				content: '/rifat-card.png',
+			},
+			{
+				property: 'og:image:alt',
+				content: 'Rifat Hossain - Full-stack Software Engineer',
+			},
+			{
+				property: 'og:url',
+				content: 'https://rifathossain.com',
+			},
+			{
+				name: 'twitter:card',
+				content: 'summary_large_image',
+			},
+			{
+				name: 'twitter:title',
+				content: 'Rifat Hossain | Full-stack Software Engineer',
+			},
+			{
+				name: 'twitter:description',
+				content:
+					'Full-stack software engineer specializing in accessible web experiences, scaling systems, and shipping reliable applications.',
+			},
+			{
+				name: 'twitter:image',
+				content: '/rifat-card.png',
+			},
 		],
 		links: [
 			{
 				rel: 'stylesheet',
 				href: appCss,
+			},
+			{
+				rel: 'icon',
+				href: '/favicon.ico',
+			},
+			{
+				rel: 'apple-touch-icon',
+				href: '/apple-touch-icon.png',
+				sizes: '180x180',
 			},
 		],
 	}),
