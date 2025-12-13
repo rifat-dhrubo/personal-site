@@ -1,6 +1,4 @@
-'use client';
-
-import { Link, useLocation } from '@tanstack/react-router';
+import { ClientOnly, Link, useLocation } from '@tanstack/react-router';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
@@ -31,17 +29,19 @@ export function Navigation() {
 						>
 							work
 						</Link>
-						<button
-							aria-label="Toggle theme"
-							className="-m-2 p-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
-							onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-						>
-							{theme === 'dark' ? (
-								<Sun className="h-4 w-4" />
-							) : (
-								<Moon className="h-4 w-4" />
-							)}
-						</button>
+						<ClientOnly>
+							<button
+								aria-label="Toggle theme"
+								className="-m-2 p-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
+								onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+							>
+								{theme === 'dark' ? (
+									<Sun className="h-4 w-4" />
+								) : (
+									<Moon className="h-4 w-4" />
+								)}
+							</button>
+						</ClientOnly>
 					</div>
 				</div>
 			</div>

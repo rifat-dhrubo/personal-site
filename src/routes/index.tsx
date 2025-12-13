@@ -4,6 +4,7 @@ import React from 'react';
 
 import { Navigation } from '@/features/portfolio/navigation';
 import { SocialLink } from '@/features/portfolio/social-link';
+import { cn } from '@/lib/utils';
 
 export const Route = createFileRoute('/')({
 	component: RouteComponent,
@@ -23,9 +24,10 @@ function RouteComponent() {
 			<main className="flex min-h-screen items-center justify-center px-6">
 				<div className="w-full max-w-2xl">
 					<div
-						className={`space-y-10 transition-all duration-700 ease-out ${
-							mounted ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-						}`}
+						className={cn(
+							'space-y-10 transition-all duration-700 ease-out',
+							mounted ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0',
+						)}
 					>
 						{/* Header */}
 						<header className="space-y-4">
