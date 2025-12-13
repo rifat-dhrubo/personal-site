@@ -1,5 +1,9 @@
 # AGENTS.md - Coding Guidelines
 
+In all interactions, plans and commit messages, be extremely concise. Sacrifice grammar for the sake of concision.
+
+List any unresolved questions at the end, if any.
+
 ## Commands
 
 - **Dev**: `pnpm dev` (port 3333)

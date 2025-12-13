@@ -2,6 +2,8 @@ import { ClientOnly, Link, useLocation } from '@tanstack/react-router';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
+import { cn } from '@/lib/utils';
+
 export function Navigation() {
 	const { resolvedTheme, setTheme } = useTheme();
 	const pathname = useLocation({
@@ -21,11 +23,12 @@ export function Navigation() {
 					<div className="flex items-center gap-8">
 						<Link
 							to="/work"
-							className={`text-sm transition-colors duration-200 ${
+							className={cn(
+								'text-sm transition-colors duration-200',
 								pathname === '/work'
 									? 'font-medium text-foreground'
-									: 'text-muted-foreground hover:text-foreground'
-							}`}
+									: 'text-muted-foreground hover:text-foreground',
+							)}
 						>
 							work
 						</Link>
