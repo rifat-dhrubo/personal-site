@@ -3,7 +3,7 @@ import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 export function Navigation() {
-	const { setTheme, theme } = useTheme();
+	const { resolvedTheme, setTheme } = useTheme();
 	const pathname = useLocation({
 		select: (location) => location.pathname,
 	});
@@ -29,13 +29,17 @@ export function Navigation() {
 						>
 							work
 						</Link>
-						<ClientOnly>
+						<ClientOnly fallback={<div className="size-4"></div>}>
 							<button
 								aria-label="Toggle theme"
 								className="-m-2 p-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
-								onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+								onClick={() =>
+									setTheme((currentTheme) =>
+										currentTheme === 'dark' ? 'light' : 'dark',
+									)
+								}
 							>
-								{theme === 'dark' ? (
+								{resolvedTheme === 'dark' ? (
 									<Sun className="h-4 w-4" />
 								) : (
 									<Moon className="h-4 w-4" />
