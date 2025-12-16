@@ -11,7 +11,7 @@ export function Navigation() {
 	});
 
 	return (
-		<nav className="fixed top-0 right-0 left-0 z-50 border-b border-border/50 bg-background/60 backdrop-blur-2xl">
+		<nav className="fixed top-0 right-0 left-0 z-50 max-h-(--nav-height) border-b border-border/50 bg-background/60 backdrop-blur-2xl">
 			<div className="mx-auto max-w-5xl px-6">
 				<div className="flex h-14 items-center justify-between">
 					<Link
@@ -37,9 +37,7 @@ export function Navigation() {
 								aria-label="Toggle theme"
 								className="-m-2 p-2 text-muted-foreground transition-colors duration-200 hover:text-foreground"
 								onClick={() =>
-									setTheme((currentTheme) =>
-										currentTheme === 'dark' ? 'light' : 'dark',
-									)
+									setTheme(() => (resolvedTheme === 'dark' ? 'light' : 'dark'))
 								}
 							>
 								{resolvedTheme === 'dark' ? (

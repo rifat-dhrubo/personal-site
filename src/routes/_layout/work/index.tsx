@@ -3,11 +3,10 @@ import { Briefcase, User } from 'lucide-react';
 import React from 'react';
 
 import { ExperienceItem } from '@/features/portfolio/experience-item';
-import { Navigation } from '@/features/portfolio/navigation';
 import { Section } from '@/features/portfolio/section';
 import { cn } from '@/lib/utils';
 
-export const Route = createFileRoute('/work/')({ component: Work });
+export const Route = createFileRoute('/_layout/work/')({ component: Work });
 
 const experiences = [
 	{
@@ -16,10 +15,12 @@ const experiences = [
 		location: 'Munich, Germany',
 		period: 'Mar 2025 — Present',
 		highlights: [
-			'Lead architectural design and technical direction with Vite, React, and Next.js',
-			'Spearhead performance optimization for significantly faster load times',
-			'Establish build processes, automated testing (Vitest), and asset management',
+			'Lead front-end architectural design and technical direction on various projects as Lead Front-end Developer',
+			'Spearheaded development for complex web based tool for some of the largest companies in the world.',
+			'Built scalable backend using FastApi, postgresql, mongodb, redis and various other tools',
+			'Establish build processes, automated testing, and asset management',
 			'Mentor frontend developers, fostering technical excellence',
+			'Collaborated in Agile sprints for rapid prototyping, iterative delivery, and team alignment',
 		],
 	},
 	{
@@ -99,9 +100,7 @@ function Work() {
 	}, []);
 
 	return (
-		<div className="min-h-screen bg-background text-foreground">
-			<Navigation />
-
+		<>
 			<div
 				className={cn(
 					'transition-all duration-700 ease-out',
@@ -149,16 +148,7 @@ function Work() {
 						))}
 					</div>
 				</Section> */}
-
-				{/* Footer */}
-				<footer className="border-t border-border/30 py-12">
-					<div className="mx-auto max-w-5xl px-6">
-						<p className="text-center text-xs text-muted-foreground/50">
-							© 2025 Rifat Hossain
-						</p>
-					</div>
-				</footer>
 			</div>
-		</div>
+		</>
 	);
 }

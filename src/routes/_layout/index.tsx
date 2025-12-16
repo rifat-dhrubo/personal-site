@@ -2,11 +2,10 @@ import { createFileRoute } from '@tanstack/react-router';
 import { FileText, Github, Linkedin, Mail } from 'lucide-react';
 import React from 'react';
 
-import { Navigation } from '@/features/portfolio/navigation';
 import { SocialLink } from '@/features/portfolio/social-link';
 import { cn } from '@/lib/utils';
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute('/_layout/')({
 	component: RouteComponent,
 });
 
@@ -18,10 +17,8 @@ function RouteComponent() {
 	}, []);
 
 	return (
-		<div className="min-h-screen bg-background text-foreground">
-			<Navigation />
-
-			<main className="flex min-h-screen items-center justify-center px-6">
+		<>
+			<main className="flex min-h-[calc(100vh-var(--nav-height))] items-center justify-center px-6">
 				<div className="w-full max-w-2xl">
 					<div
 						className={cn(
@@ -80,15 +77,6 @@ function RouteComponent() {
 					</div>
 				</div>
 			</main>
-
-			{/* Footer */}
-			<footer className="fixed right-0 bottom-0 left-0 border-t border-border/50 bg-background/60 py-4 backdrop-blur-2xl">
-				<div className="mx-auto max-w-5xl px-6">
-					<p className="text-center text-xs text-muted-foreground/50">
-						&copy; 2025 Rifat Hossain
-					</p>
-				</div>
-			</footer>
-		</div>
+		</>
 	);
 }
