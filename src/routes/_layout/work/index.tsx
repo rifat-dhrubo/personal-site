@@ -11,8 +11,8 @@ export const Route = createFileRoute('/_layout/work/')({ component: Work });
 const experiences = [
 	{
 		title: 'Senior Frontend Developer',
-		company: 'InfinitiBit GmbH',
-		location: 'Munich, Germany',
+		company: 'InfinitiBit Limited',
+		location: 'Dhaka, Bangladesh',
 		period: 'Mar 2025 — Present',
 		highlights: [
 			'Lead front-end architectural design and technical direction on various projects as Lead Front-end Developer',
