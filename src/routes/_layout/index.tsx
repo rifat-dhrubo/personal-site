@@ -51,7 +51,7 @@ function RouteComponent() {
 						{/* Links */}
 						<div className="flex flex-wrap gap-3">
 							<SocialLink
-								href="mailto:rifat.hossain.dhrubo@gmail.com"
+								href="mailto:rifat109@gmail.com"
 								icon={Mail}
 								label="Email"
 							/>
